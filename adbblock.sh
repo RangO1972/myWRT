@@ -27,10 +27,10 @@ wget -qO- "https://raw.githubusercontent.com/RangO1972/myWRT/master/host_servers
 # replace double+ spaces with single spaces
 # remove carriage returns
 
-# wget -i ${HOST_LIST} -qO- | grep -v -e "^#" -e "^\s*$" -e "\blocalhost\b" | sed -E -e "s/^127.0.0.1/0.0.0.0/" -e "s/#.*$//" -e "s/\t/ /" -e "s/[[:space:]]{2,}/ /" | tr -d "\r" >> ${TMP_HOSTS}
+wget -i ${HOST_LIST} -qO- | grep -v -e "^#" -e "^\s*$" -e "\blocalhost\b" | sed -E -e "s/^127.0.0.1/0.0.0.0/" -e "s/#.*$//" -e "s/\t/ /" -e "s/[[:space:]]{2,}/ /" | tr -d "\r" >> ${TMP_HOSTS}
 
 # remove duplicate hosts and save the real hosts file
-#sort ${TMP_HOSTS} | uniq > ${HOSTS}
+sort ${TMP_HOSTS} | uniq > ${HOSTS}
 
 
 
