@@ -8,6 +8,6 @@ chmod +x /etc/adblock.sh
 
 Sample host file:
 
-wget --no-check-certificate https://raw.githubusercontent.com/RangO1972/myWRT/master/adbblock.sh -O /etc/
+wget --no-check-certificate https://raw.githubusercontent.com/RangO1972/myWRT/master/block.hosts -O /etc/block.hosts
 
 
