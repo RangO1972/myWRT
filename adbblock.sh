@@ -15,7 +15,7 @@ rm ${HOST_LIST} 2> /dev/null
 # filter out empty lines
 # replace double+ spaces with single spaces
 # remove carriage returns
-wget -qO- "https://raw.githubusercontent.com/RangO1972/myWRT/master/host_servers.txt" | grep -v -e "^#" -e "^\s*$" | sed -E -e "s/[[:space:]]{2,}/ /" | tr -d "\r" >> ${HOST_LIST}
+#wget -qO- "https://raw.githubusercontent.com/RangO1972/myWRT/master/host_servers.txt" | grep -v -e "^#" -e "^\s*$" | sed -E -e "s/[[:space:]]{2,}/ /" | tr -d "\r" >> ${HOST_LIST}
 
 # grab a hosts file list and...
 # filter out comment lines
