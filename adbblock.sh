@@ -1,6 +1,6 @@
 #!/bin/ash
 
-HOST_LIST=/tmp/myhostlist
+HOST_LIST=/tmp/host_servers.txt
 TMP_HOSTS=/tmp/block.hosts.unsorted
 HOSTS=/tmp/block.hosts
 
@@ -15,7 +15,7 @@ rm ${HOST_LIST} 2> /dev/null
 # filter out empty lines
 # replace double+ spaces with single spaces
 # remove carriage returns
-wget -i  -qO- | grep -v -e "^#" -e "^\s*$" | sed -E -e "s/[[:space:]]{2,}/ /" | tr -d "\r" >> ${HOST_LIST}
+wget -i https://raw.githubusercontent.com/RangO1972/myWRT/master/host_servers.txt -qO- | grep -v -e "^#" -e "^\s*$" | sed -E -e "s/[[:space:]]{2,}/ /" | tr -d "\r" >> ${HOST_LIST}
 
 # grab a hosts file list and...
 # filter out comment lines
